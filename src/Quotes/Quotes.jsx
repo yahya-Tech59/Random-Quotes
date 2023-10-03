@@ -9,7 +9,7 @@ export const Quotes = () => {
   const [state, setState] = useState({
     quote: "The best richness is the richness of soul",
     author: "Prophet Muhammad (Peace Be Up On Him)",
-    quoteData: [],
+    quotesData: [],
     color: "rgb(243, 156, 18)",
   });
 
@@ -34,7 +34,7 @@ export const Quotes = () => {
         document.body.style.backgroundColor = color;
 
         setState({
-          quoteData: quotesData,
+          quotesData: quotesData,
           color: color,
         });
       })
@@ -42,7 +42,7 @@ export const Quotes = () => {
   };
 
   useEffect(() => {
-    if (state.quoteData.length > 0) {
+    if (state.quotesData.length > 0) {
       return;
     } else {
       fetchQuotes();
@@ -50,8 +50,8 @@ export const Quotes = () => {
   });
 
   const handleClick = () => {
-    let randomIndex = Math.floor(Math.random() * 16);
-    let { quote, author } = state.quoteData[randomIndex];
+    const randomIndex = Math.floor(Math.random() * 16);
+    const { quote, author } = state.quotesData[randomIndex];
 
     const color = randomColor();
     document.body.style = color;
@@ -67,7 +67,7 @@ export const Quotes = () => {
     <div id="quote-box">
       <QuotesText quote={state.quote} color={state.color} />
       <QuotesAuthor author={state.author} color={state.color} />
-      <Button />
+      <Button handleClick={handleClick} color={state.color} />
     </div>
   );
 };

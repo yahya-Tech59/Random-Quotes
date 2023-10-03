@@ -1,8 +1,13 @@
 import React from "react";
 
-export const Button = () => {
+export const Button = ({ id, color, handleClick }) => {
   return (
-    <div className="buttons">
+    <div
+      id={id}
+      onClick={handleClick}
+      style={{ backgroundColor: color }}
+      className="buttons"
+    >
       <button className="button">New Quote</button>
     </div>
   );
