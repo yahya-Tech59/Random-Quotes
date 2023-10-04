@@ -5,10 +5,9 @@
   text-decoration: none;
 }
 
-/* rgb(243, 156, 18) */
-
 body {
-  font-family: "Courier New", Courier, monospace;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-family: "Patrick Hand", cursive;
   background-color: rgb(243, 156, 18);
   display: flex;
   justify-content: center;
