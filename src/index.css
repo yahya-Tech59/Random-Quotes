@@ -6,9 +6,10 @@
 }
 
 body {
-  /* font-family: 'Courier New', Courier, monospace; */
-  font-family: "Patrick Hand", cursive;
+  font-family: "Courier New", "Fira Code", Courier, monospace;
+  /* font-family: "Patrick Hand", cursive; */
   background-color: rgb(243, 156, 18);
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +22,11 @@ body {
   color: white;
   text-align: center;
 }
+#footer span {
+  font-size: 40px;
+}
 
 #footer a {
   color: white;
+  font-size: 40px;
 }
